@@ -1,0 +1,1 @@
+E<> PA.End and PB.End and delivered == 1

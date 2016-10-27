@@ -1,0 +1,334 @@
+sch:
+
+State:
+( O1.idle O2.idle O3.idle A1.start A2.start A3.start P.start C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=0 P.gc=0 C1.c=0 C1.gc=0 C2.gc=0 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=-1 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=-1 agentAt[0]=-1 agentAt[1]=-1 agentAt[2]=-1 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=0 cost=0
+
+Transitions:
+  A3.start->A3.ready { 1, tau, c := 0 }
+
+State:
+( O1.idle O2.idle O3.idle A1.start A2.start A3.ready P.start C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=0 P.gc=0 C1.c=0 C1.gc=0 C2.gc=0 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=-1 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=-1 agentAt[0]=-1 agentAt[1]=-1 agentAt[2]=-1 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=-660 cost=0
+
+Transitions:
+  A1.start->A1.ready { 1, tau, c := 0 }
+
+State:
+( O1.idle O2.idle O3.idle A1.ready A2.start A3.ready P.start C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=0 P.gc=0 C1.c=0 C1.gc=0 C2.gc=0 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=-1 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=-1 agentAt[0]=-1 agentAt[1]=-1 agentAt[2]=-1 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=-660 cost=0
+
+Transitions:
+  A2.start->A2.ready { 1, tau, c := 0 }
+
+State:
+( O1.idle O2.idle O3.idle A1.ready A2.ready A3.ready P.start C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=0 P.gc=0 C1.c=0 C1.gc=0 C2.gc=0 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=-1 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=-1 agentAt[0]=-1 agentAt[1]=-1 agentAt[2]=-1 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=-1380 cost=0
+
+Transitions:
+  P.start->P.ready { 1, tau, c := 0 }
+
+State:
+( O1.idle O2.idle O3.idle A1.ready A2.ready A3.ready P.ready C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=0 P.gc=0 C1.c=0 C1.gc=0 C2.gc=0 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=-1 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=-1 agentAt[0]=-1 agentAt[1]=-1 agentAt[2]=-1 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1620 cost=0
+
+Delay: 1
+
+State:
+( O1.idle O2.idle O3.idle A1.ready A2.ready A3.ready P.ready C1.start C2.start )
+A1.c=1 A2.c=1 A3.c=1 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=-1 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=-1 agentAt[0]=-1 agentAt[1]=-1 agentAt[2]=-1 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1620 cost=1620
+
+Transitions:
+  A3.ready->A3.idle { c == 1, tau, agentAt[id] := src, c := 0 }
+
+State:
+( O1.idle O2.idle O3.idle A1.ready A2.ready A3.idle P.ready C1.start C2.start )
+A1.c=1 A2.c=1 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=-1 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=-1 agentAt[0]=-1 agentAt[1]=-1 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2281 cost=1620
+
+Transitions:
+  O1.idle->O1.wait2 { agentAt[2] >= 0, g4t[2]!, takeAt[2] := src, dropAt[2] := des }
+  A3.idle->A3.judg { 1, g4t[id]?, c := 0 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.ready A2.ready A3.judg P.ready C1.start C2.start )
+A1.c=1 A2.c=1 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=-1 agentAt[1]=-1 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2280 cost=1620
+
+Transitions:
+  A2.ready->A2.idle { c == 1, tau, agentAt[id] := src, c := 0 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.ready A2.idle A3.judg P.ready C1.start C2.start )
+A1.c=1 A2.c=0 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=-1 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=3001 cost=1620
+
+Transitions:
+  A3.judg->A3.go4trans { 1, tau, 1 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.ready A2.idle A3.go4trans P.ready C1.start C2.start )
+A1.c=1 A2.c=0 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=-1 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=3002 cost=1620
+
+Transitions:
+  A1.ready->A1.idle { c == 1, tau, agentAt[id] := src, c := 0 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.idle A2.idle A3.go4trans P.ready C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=3003 cost=1620
+
+Transitions:
+  A3.go4trans->A3.wait { c == dis[agentAt[id]][takeAt[id]], tau, agentAt[id] := takeAt[id] }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.idle A2.idle A3.wait P.ready C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=3003 cost=1620
+
+Transitions:
+  A1.idle->A1.todes { 1, tau, c := 0 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.todes A2.idle A3.wait P.ready C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=3003 cost=1620
+
+Transitions:
+  A2.idle->A2.todes { 1, tau, c := 0 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.todes A2.todes A3.wait P.ready C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=3003 cost=1620
+
+Transitions:
+  A1.todes->A1.arrived { c == dis[agentAt[id]][des], tau, agentAt[id] := des, c := 0 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.arrived A2.todes A3.wait P.ready C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=1 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=3002 cost=1620
+
+Transitions:
+  P.ready->P.br { c == 1 && agentAt[0] >= 0 && agentAt[1] >= 0 && agentAt[2] >= 0, tau, c := 0 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.arrived A2.todes A3.wait P.br C1.start C2.start )
+A1.c=0 A2.c=0 A3.c=0 P.c=0 P.gc=1 C1.c=1 C1.gc=1 C2.gc=1 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=1620
+
+Delay: 5
+
+State:
+( O1.wait2 O2.idle O3.idle A1.arrived A2.todes A3.wait P.br C1.start C2.start )
+A1.c=5 A2.c=5 A3.c=5 P.c=5 P.gc=6 C1.c=6 C1.gc=6 C2.gc=6 con=0 con1_done=0 con2_done=0 objectAt[0]=-1 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=1630
+
+Transitions:
+  P.br->P.fb { c == 5, tau, objectAt[0] := l7, c := 0 }
+
+State:
+( O1.wait2 O2.idle O3.idle A1.arrived A2.todes A3.wait P.fb C1.start C2.start )
+A1.c=5 A2.c=5 A3.c=5 P.c=0 P.gc=6 C1.c=6 C1.gc=6 C2.gc=6 con=0 con1_done=0 con2_done=0 objectAt[0]=7 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=0 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=-1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=1630
+
+Transitions:
+  O1.wait2->O1.intrans2 { objectAt[id] == src, take[2]!, treattime[2] := tt, takeObj[2] := id }
+  A3.wait->A3.intrans { 1, take[id]?, c := 0 }
+
+State:
+( O1.intrans2 O2.idle O3.idle A1.arrived A2.todes A3.intrans P.fb C1.start C2.start )
+A1.c=5 A2.c=5 A3.c=0 P.c=0 P.gc=6 C1.c=6 C1.gc=6 C2.gc=6 con=0 con1_done=0 con2_done=0 objectAt[0]=7 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=1630
+
+Delay: 528
+
+State:
+( O1.intrans2 O2.idle O3.idle A1.arrived A2.todes A3.intrans P.fb C1.start C2.start )
+A1.c=533 A2.c=533 A3.c=528 P.c=528 P.gc=534 C1.c=534 C1.gc=534 C2.gc=534 con=0 con1_done=0 con2_done=0 objectAt[0]=7 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=-1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=2686
+
+Transitions:
+  A3.intrans->A3.idle { c == dis[agentAt[id]][dropAt[id]] + treattime[id], drop[id]!, agentAt[id] := dropAt[id], c := 0 }
+  O1.intrans2->O1.idle { 1, drop[2]?, objectAt[id] := des, dropObj[2] := id }
+
+State:
+( O1.idle O2.idle O3.idle A1.arrived A2.todes A3.idle P.fb C1.start C2.start )
+A1.c=533 A2.c=533 A3.c=0 P.c=528 P.gc=534 C1.c=534 C1.gc=534 C2.gc=534 con=0 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=7 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=9 agentAt[0]=0 agentAt[1]=10 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=2686
+
+Transitions:
+  O3.idle->O3.wait2 { agentAt[2] >= 0, g4t[2]!, takeAt[2] := src, dropAt[2] := des }
+  A3.idle->A3.judg { 1, g4t[id]?, c := 0 }
+
+State:
+( O1.idle O2.idle O3.wait2 A1.arrived A2.todes A3.judg P.fb C1.start C2.start )
+A1.c=533 A2.c=533 A3.c=0 P.c=528 P.gc=534 C1.c=534 C1.gc=534 C2.gc=534 con=0 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=10 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=2686
+
+Transitions:
+  A3.judg->A3.go4trans { 1, tau, 1 }
+
+State:
+( O1.idle O2.idle O3.wait2 A1.arrived A2.todes A3.go4trans P.fb C1.start C2.start )
+A1.c=533 A2.c=533 A3.c=0 P.c=528 P.gc=534 C1.c=534 C1.gc=534 C2.gc=534 con=0 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=10 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=2686
+
+Transitions:
+  A3.go4trans->A3.wait { c == dis[agentAt[id]][takeAt[id]], tau, agentAt[id] := takeAt[id] }
+
+State:
+( O1.idle O2.idle O3.wait2 A1.arrived A2.todes A3.wait P.fb C1.start C2.start )
+A1.c=533 A2.c=533 A3.c=0 P.c=528 P.gc=534 C1.c=534 C1.gc=534 C2.gc=534 con=0 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=10 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=2686
+
+Transitions:
+  P.fb->P.sb { objectAt[0] == l9 && gc <= 3600, tau, c := 0 }
+
+State:
+( O1.idle O2.idle O3.wait2 A1.arrived A2.todes A3.wait P.sb C1.start C2.start )
+A1.c=533 A2.c=533 A3.c=0 P.c=0 P.gc=534 C1.c=534 C1.gc=534 C2.gc=534 con=0 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=10 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=2686
+
+Delay: 187
+
+State:
+( O1.idle O2.idle O3.wait2 A1.arrived A2.todes A3.wait P.sb C1.start C2.start )
+A1.c=720 A2.c=720 A3.c=187 P.c=187 P.gc=721 C1.c=721 C1.gc=721 C2.gc=721 con=0 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=10 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=2 cost=3060
+
+Transitions:
+  A2.todes->A2.arrived { c == dis[agentAt[id]][des], tau, agentAt[id] := des, c := 0 }
+
+State:
+( O1.idle O2.idle O3.wait2 A1.arrived A2.arrived A3.wait P.sb C1.start C2.start )
+A1.c=720 A2.c=0 A3.c=187 P.c=187 P.gc=721 C1.c=721 C1.gc=721 C2.gc=721 con=0 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=2 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3060
+
+Delay: 313
+
+State:
+( O1.idle O2.idle O3.wait2 A1.arrived A2.arrived A3.wait P.sb C1.start C2.start )
+A1.c=1033 A2.c=313 A3.c=500 P.c=500 P.gc=1034 C1.c=1034 C1.gc=1034 C2.gc=1034 con=0 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=-1 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=2 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3373
+
+Transitions:
+  P.sb->P.tmp { c == 500, tau, objectAt[2] := l9, con := 1 }
+
+State:
+( O1.idle O2.idle O3.wait2 A1.arrived A2.arrived A3.wait P.tmp C1.start C2.start )
+A1.c=1033 A2.c=313 A3.c=500 P.c=500 P.gc=1034 C1.c=1034 C1.gc=1034 C2.gc=1034 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=9 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=2 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=8 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=0 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3373
+
+Transitions:
+  O3.wait2->O3.intrans2 { objectAt[id] == src, take[2]!, treattime[2] := tt, takeObj[2] := id }
+  A3.wait->A3.intrans { 1, take[id]?, c := 0 }
+
+State:
+( O1.idle O2.idle O3.intrans2 A1.arrived A2.arrived A3.intrans P.tmp C1.start C2.start )
+A1.c=1033 A2.c=313 A3.c=0 P.c=500 P.gc=1034 C1.c=1034 C1.gc=1034 C2.gc=1034 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=9 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=2 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3373
+
+Delay: 535
+
+State:
+( O1.idle O2.idle O3.intrans2 A1.arrived A2.arrived A3.intrans P.tmp C1.start C2.start )
+A1.c=1568 A2.c=848 A3.c=535 P.c=1035 P.gc=1569 C1.c=1569 C1.gc=1569 C2.gc=1569 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=9 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=2 agentAt[2]=9 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=0 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3908
+
+Transitions:
+  A3.intrans->A3.idle { c == dis[agentAt[id]][dropAt[id]] + treattime[id], drop[id]!, agentAt[id] := dropAt[id], c := 0 }
+  O3.intrans2->O3.idle { 1, drop[2]?, objectAt[id] := des, dropObj[2] := id }
+
+State:
+( O1.idle O2.idle O3.idle A1.arrived A2.arrived A3.idle P.tmp C1.start C2.start )
+A1.c=1568 A2.c=848 A3.c=0 P.c=1035 P.gc=1569 C1.c=1569 C1.gc=1569 C2.gc=1569 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=9 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=7 agentAt[0]=0 agentAt[1]=2 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3908
+
+Transitions:
+  O2.idle->O2.wait2 { agentAt[2] >= 0, g4t[2]!, takeAt[2] := src, dropAt[2] := des }
+  A3.idle->A3.judg { 1, g4t[id]?, c := 0 }
+
+State:
+( O1.idle O2.wait2 O3.idle A1.arrived A2.arrived A3.judg P.tmp C1.start C2.start )
+A1.c=1568 A2.c=848 A3.c=0 P.c=1035 P.gc=1569 C1.c=1569 C1.gc=1569 C2.gc=1569 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=0 cost=3908
+
+Transitions:
+  A3.judg->A3.go4trans { 1, tau, 1 }
+
+State:
+( O1.idle O2.wait2 O3.idle A1.arrived A2.arrived A3.go4trans P.tmp C1.start C2.start )
+A1.c=1568 A2.c=848 A3.c=0 P.c=1035 P.gc=1569 C1.c=1569 C1.gc=1569 C2.gc=1569 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3908
+
+Delay: 80
+
+State:
+( O1.idle O2.wait2 O3.idle A1.arrived A2.arrived A3.go4trans P.tmp C1.start C2.start )
+A1.c=1648 A2.c=928 A3.c=80 P.c=1115 P.gc=1649 C1.c=1649 C1.gc=1649 C2.gc=1649 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3988
+
+Transitions:
+  C1.start->C1.rp { con == 1, tau, c := 0 }
+
+State:
+( O1.idle O2.wait2 O3.idle A1.arrived A2.arrived A3.go4trans P.tmp C1.rp C2.start )
+A1.c=1648 A2.c=928 A3.c=80 P.c=1115 P.gc=1649 C1.c=0 C1.gc=1649 C2.gc=1649 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=3988
+
+Delay: 100
+
+State:
+( O1.idle O2.wait2 O3.idle A1.arrived A2.arrived A3.go4trans P.tmp C1.rp C2.start )
+A1.c=1748 A2.c=1028 A3.c=180 P.c=1215 P.gc=1749 C1.c=100 C1.gc=1749 C2.gc=1749 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=7 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4088
+
+Transitions:
+  A3.go4trans->A3.wait { c == dis[agentAt[id]][takeAt[id]], tau, agentAt[id] := takeAt[id] }
+
+State:
+( O1.idle O2.wait2 O3.idle A1.arrived A2.arrived A3.wait P.tmp C1.rp C2.start )
+A1.c=1748 A2.c=1028 A3.c=180 P.c=1215 P.gc=1749 C1.c=100 C1.gc=1749 C2.gc=1749 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=-1 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=5 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4088
+
+Transitions:
+  C1.rp->C1.fc { c == 100, tau, objectAt[1] := l5 }
+
+State:
+( O1.idle O2.wait2 O3.idle A1.arrived A2.arrived A3.wait P.tmp C1.fc C2.start )
+A1.c=1748 A2.c=1028 A3.c=180 P.c=1215 P.gc=1749 C1.c=100 C1.gc=1749 C2.gc=1749 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=5 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=5 treattime[0]=0 treattime[1]=0 treattime[2]=15 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=2 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4088
+
+Transitions:
+  O2.wait2->O2.intrans2 { objectAt[id] == src, take[2]!, treattime[2] := tt, takeObj[2] := id }
+  A3.wait->A3.intrans { 1, take[id]?, c := 0 }
+
+State:
+( O1.idle O2.intrans2 O3.idle A1.arrived A2.arrived A3.intrans P.tmp C1.fc C2.start )
+A1.c=1748 A2.c=1028 A3.c=0 P.c=1215 P.gc=1749 C1.c=100 C1.gc=1749 C2.gc=1749 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=5 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=5 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4088
+
+Transitions:
+  C2.start->C2.rb { con == 1 && objectAt[2] == l7, tau, 1 }
+
+State:
+( O1.idle O2.intrans2 O3.idle A1.arrived A2.arrived A3.intrans P.tmp C1.fc C2.rb )
+A1.c=1748 A2.c=1028 A3.c=0 P.c=1215 P.gc=1749 C1.c=100 C1.gc=1749 C2.gc=1749 con=1 con1_done=0 con2_done=0 objectAt[0]=9 objectAt[1]=5 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=5 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4088
+
+Transitions:
+  C2.rb->C2.end { gc <= 3600, tau, con2_done := 1 }
+
+State:
+( O1.idle O2.intrans2 O3.idle A1.arrived A2.arrived A3.intrans P.tmp C1.fc C2.end )
+A1.c=1748 A2.c=1028 A3.c=0 P.c=1215 P.gc=1749 C1.c=100 C1.gc=1749 C2.gc=1749 con=1 con1_done=0 con2_done=1 objectAt[0]=9 objectAt[1]=5 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=5 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4088
+
+Delay: 485
+
+State:
+( O1.idle O2.intrans2 O3.idle A1.arrived A2.arrived A3.intrans P.tmp C1.fc C2.end )
+A1.c=2233 A2.c=1513 A3.c=485 P.c=1700 P.gc=2234 C1.c=585 C1.gc=2234 C2.gc=2234 con=1 con1_done=0 con2_done=1 objectAt[0]=9 objectAt[1]=5 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=5 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=2 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4573
+
+Transitions:
+  A3.intrans->A3.idle { c == dis[agentAt[id]][dropAt[id]] + treattime[id], drop[id]!, agentAt[id] := dropAt[id], c := 0 }
+  O2.intrans2->O2.idle { 1, drop[2]?, objectAt[id] := des, dropObj[2] := id }
+
+State:
+( O1.idle O2.idle O3.idle A1.arrived A2.arrived A3.idle P.tmp C1.fc C2.end )
+A1.c=2233 A2.c=1513 A3.c=0 P.c=1700 P.gc=2234 C1.c=585 C1.gc=2234 C2.gc=2234 con=1 con1_done=0 con2_done=1 objectAt[0]=9 objectAt[1]=0 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=0 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4573
+
+Transitions:
+  C1.fc->C1.end { objectAt[1] == l0 && gc <= 3600, tau, con1_done := 1 }
+
+State:
+( O1.idle O2.idle O3.idle A1.arrived A2.arrived A3.idle P.tmp C1.end C2.end )
+A1.c=2233 A2.c=1513 A3.c=0 P.c=1700 P.gc=2234 C1.c=585 C1.gc=2234 C2.gc=2234 con=1 con1_done=1 con2_done=1 objectAt[0]=9 objectAt[1]=0 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=0 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4573
+
+Transitions:
+  P.tmp->P.end { con1_done == 1 && con2_done == 1 && gc <= 3600, tau, 1 }
+
+State:
+( O1.idle O2.idle O3.idle A1.arrived A2.arrived A3.idle P.end C1.end C2.end )
+A1.c=2233 A2.c=1513 A3.c=0 P.c=1700 P.gc=2234 C1.c=585 C1.gc=2234 C2.gc=2234 con=1 con1_done=1 con2_done=1 objectAt[0]=9 objectAt[1]=0 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=0 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4573
+
+Transitions:
+  A3.idle->A3.todes { 1, tau, c := 0 }
+
+State:
+( O1.idle O2.idle O3.idle A1.arrived A2.arrived A3.todes P.end C1.end C2.end )
+A1.c=2233 A2.c=1513 A3.c=0 P.c=1700 P.gc=2234 C1.c=585 C1.gc=2234 C2.gc=2234 con=1 con1_done=1 con2_done=1 objectAt[0]=9 objectAt[1]=0 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=0 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=1 cost=4573
+
+Transitions:
+  A3.todes->A3.arrived { c == dis[agentAt[id]][des], tau, agentAt[id] := des, c := 0 }
+
+State:
+( O1.idle O2.idle O3.idle A1.arrived A2.arrived A3.arrived P.end C1.end C2.end )
+A1.c=2233 A2.c=1513 A3.c=0 P.c=1700 P.gc=2234 C1.c=585 C1.gc=2234 C2.gc=2234 con=1 con1_done=1 con2_done=1 objectAt[0]=9 objectAt[1]=0 objectAt[2]=7 takeAt[0]=-1 takeAt[1]=-1 takeAt[2]=5 dropAt[0]=-1 dropAt[1]=-1 dropAt[2]=0 agentAt[0]=0 agentAt[1]=2 agentAt[2]=0 treattime[0]=0 treattime[1]=0 treattime[2]=5 takeObj[0]=-1 takeObj[1]=-1 takeObj[2]=1 dropObj[0]=-1 dropObj[1]=-1 dropObj[2]=1 O1.src=7 O1.des=9 O1.tt=8 O2.src=5 O2.des=0 O2.tt=5 O3.src=9 O3.des=7 O3.tt=15 A1.src=0 A1.des=0 A1.co=1 A1.thr=500 A2.src=10 A2.des=2 A2.co=1 A2.thr=5000 A3.src=7 A3.des=0 A3.co=1 A3.thr=5000 rate=0 cost=4573

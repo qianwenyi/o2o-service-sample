@@ -1,0 +1,10 @@
+#!/bin/sh 
+
+HERE=`dirname $0`
+JAR=$HERE/uppaal.jar
+ENGINE=$HERE/bin-`uname`
+if [ "$DISPLAY" = ":0.0" ]; then 
+  java -jar $JAR -enginePath $ENGINE $* 
+else
+  java -jar $JAR -enginePath $ENGINE -antialias off $* 
+fi

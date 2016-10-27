@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<nta>
+<declaration>int[0,1] con = 0;int[0,1] con1_done = 0;int[0,1] con2_done = 0;const int locations = 12;const int l0 = 0;const int l1 = 1;const int l2 = 2;const int l3 = 3;const int l4 = 4;const int l5 = 5;const int l6 = 6;const int l7 = 7;const int l8 = 8;const int l9 = 9;const int l10 = 10;const int l11 = 11;const int objects = 3;const int agents = 3;const int dis[locations][locations] = {{0, 200, 400, 400, 220, 480, 660, 660, 940, 820, 1120, 960},{200, 0, 200, 200, 360, 420, 460, 600, 760, 760, 920, 900},{400, 200, 0, 400, 500, 240, 260, 420, 560, 580, 720, 720},{400, 200, 400, 0, 480, 220, 660, 400, 680, 560, 840, 700},{220, 360, 500, 480, 0, 260, 760, 440, 720, 600, 860, 740},{480, 420, 240, 220, 260, 0, 500,  180, 460, 340, 620, 480},{660, 460, 260, 660, 760, 500, 0, 580, 300, 760, 460, 620},{660, 600, 420, 400, 440,  180, 580, 0, 280, 520, 440, 600},{940, 760, 560, 680, 720, 460, 300, 280, 0, 460,  160, 320},{820, 760, 580, 560, 600, 340, 760, 520, 460, 0, 260,  140},{1120, 920, 720, 840, 880, 620, 460, 440, 160, 260, 0,  120},{960, 900, 720, 700, 740, 480, 620, 600, 320, 140, 120, 0}};int[-1,11] objectAt[objects] = {-1, -1, -1};int[-1,11] takeAt[agents] = {-1, -1, -1};int[-1,11] dropAt[agents] = {-1, -1, -1};int[-1,11] agentAt[agents] = {-1, -1, -1};urgent chan g4t[agents];urgent chan take[agents];chan drop[agents];int treattime[agents] = {0, 0, 0};int takeObj[agents] = {-1, -1, -1};int dropObj[agents] = {-1, -1, -1};</declaration>
+<template>
+<name>Obj</name>
+<parameter>const int id, int src, int des, int tt</parameter>
+<location id="id0">
+<name>intrans1</name>
+</location>
+<location id="id1">
+<name>intrans2</name>
+</location>
+<location id="id2">
+<name>intrans0</name>
+</location>
+<location id="id3">
+<name>wait2</name>
+</location>
+<location id="id4">
+<name>wait1</name>
+</location>
+<location id="id5">
+<name>wait0</name>
+</location>
+<location id="id6">
+<name>idle</name>
+</location>
+<init ref="id6"/>
+<transition>
+<source ref="id0"/>
+<target ref="id6"/>
+<label kind="synchronisation">drop[1]?</label>
+<label kind="assignment">objectAt[id] = des, dropObj[1] = id</label>
+</transition>
+<transition>
+<source ref="id4"/>
+<target ref="id0"/>
+<label kind="guard">objectAt[id] == src</label>
+<label kind="synchronisation">take[1]!</label>
+<label kind="assignment">treattime[1] = tt, takeObj[1] = id</label>
+</transition>
+<transition>
+<source ref="id1"/>
+<target ref="id6"/>
+<label kind="synchronisation">drop[2]?</label>
+<label kind="assignment">objectAt[id] = des, dropObj[2] = id</label>
+</transition>
+<transition>
+<source ref="id3"/>
+<target ref="id1"/>
+<label kind="guard">objectAt[id] == src</label>
+<label kind="synchronisation">take[2]!</label>
+<label kind="assignment">treattime[2] = tt, takeObj[2] = id</label>
+</transition>
+<transition>
+<source ref="id2"/>
+<target ref="id6"/>
+<label kind="synchronisation">drop[0]?</label>
+<label kind="assignment">objectAt[id] = des, dropObj[0] = id</label>
+</transition>
+<transition>
+<source ref="id5"/>
+<target ref="id2"/>
+<label kind="guard">objectAt[id] == src</label>
+<label kind="synchronisation">take[0]!</label>
+<label kind="assignment">treattime[0] = tt, takeObj[0] = id</label>
+</transition>
+<transition>
+<source ref="id6"/>
+<target ref="id3"/>
+<label kind="guard">agentAt[2] &gt;= 0</label>
+<label kind="synchronisation">g4t[2]!</label>
+<label kind="assignment">takeAt[2] = src, dropAt[2] = des</label>
+</transition>
+<transition>
+<source ref="id6"/>
+<target ref="id4"/>
+<label kind="guard">agentAt[1] &gt;= 0</label>
+<label kind="synchronisation">g4t[1]!</label>
+<label kind="assignment">takeAt[1] = src, dropAt[1] = des</label>
+</transition>
+<transition>
+<source ref="id6"/>
+<target ref="id5"/>
+<label kind="guard">agentAt[0] &gt;= 0</label>
+<label kind="synchronisation">g4t[0]!</label>
+<label kind="assignment">takeAt[0] = src, dropAt[0] = des</label>
+</transition>
+</template>
+<template>
+<name>Agent</name>
+<parameter>const int id, int src, int des, int co, int thr</parameter>
+<declaration>clock c;</declaration>
+<location id="id7">
+<name>judg</name>
+<urgent/>
+</location>
+<location id="id8">
+<name>start</name>
+<urgent/>
+</location>
+<location id="id9">
+<name>intrans</name>
+<label kind="invariant">c &lt;= dis[agentAt[id]][dropAt[id]] + treattime[id] &amp;&amp; cost' == co</label>
+</location>
+<location id="id10">
+<name>wait</name>
+<label kind="invariant">cost' == co</label>
+</location>
+<location id="id11">
+<name>arrived</name>
+</location>
+<location id="id12">
+<name>todes</name>
+<label kind="invariant">c &lt;= dis[agentAt[id]][des] &amp;&amp; cost' == co</label>
+</location>
+<location id="id13">
+<name>go4trans</name>
+<label kind="invariant">c &lt;= dis[agentAt[id]][takeAt[id]] &amp;&amp; cost' == co</label>
+</location>
+<location id="id14">
+<name>idle</name>
+<label kind="invariant">cost' == co</label>
+</location>
+<location id="id15">
+<name>ready</name>
+<label kind="invariant">c &lt;= 1 &amp;&amp; cost' == -dis[src][des]</label>
+</location>
+<init ref="id8"/>
+<transition>
+<source ref="id9"/>
+<target ref="id14"/>
+<label kind="guard">c == dis[agentAt[id]][dropAt[id]] + treattime[id]</label>
+<label kind="synchronisation">drop[id]!</label>
+<label kind="assignment">agentAt[id] = dropAt[id], c = 0</label>
+</transition>
+<transition>
+<source ref="id7"/>
+<target ref="id13"/>
+</transition>
+<transition>
+<source ref="id14"/>
+<target ref="id7"/>
+<label kind="synchronisation">g4t[id]?</label>
+<label kind="assignment">c = 0</label>
+</transition>
+<transition>
+<source ref="id8"/>
+<target ref="id15"/>
+<label kind="assignment">c = 0</label>
+</transition>
+<transition>
+<source ref="id10"/>
+<target ref="id9"/>
+<label kind="synchronisation">take[id]?</label>
+<label kind="assignment">c = 0</label>
+</transition>
+<transition>
+<source ref="id13"/>
+<target ref="id10"/>
+<label kind="guard">c == dis[agentAt[id]][takeAt[id]]</label>
+<label kind="assignment">agentAt[id] = takeAt[id]</label>
+</transition>
+<transition>
+<source ref="id12"/>
+<target ref="id11"/>
+<label kind="guard">c == dis[agentAt[id]][des]</label>
+<label kind="assignment">agentAt[id] = des, c = 0</label>
+</transition>
+<transition>
+<source ref="id14"/>
+<target ref="id12"/>
+<label kind="assignment">c = 0</label>
+</transition>
+<transition>
+<source ref="id15"/>
+<target ref="id14"/>
+<label kind="guard">c == 1</label>
+<label kind="assignment">agentAt[id] = src, c = 0</label>
+</transition>
+</template>
+<template>
+<name>Process</name>
+<declaration>clock c; clock gc;</declaration>
+<location id="id16">
+<name>end</name>
+</location>
+<location id="id17">
+<name>start</name>
+</location>
+<location id="id18">
+<name>tmp</name>
+</location>
+<location id="id19">
+<name>sb</name>
+<label kind="invariant">c &lt;= 400</label>
+</location>
+<location id="id20">
+<name>fb</name>
+</location>
+<location id="id21">
+<name>br</name>
+<label kind="invariant">c &lt;= 5</label>
+</location>
+<location id="id29">
+<name>ready</name>
+<label kind="invariant">c &lt;= 1 &amp;&amp; cost' == 2700</label>
+</location>
+<init ref="id17"/>
+<transition>
+<source ref="id18"/>
+<target ref="id16"/>
+<label kind="guard">con1_done == 1 &amp;&amp; con2_done == 1 &amp;&amp; gc &lt;= 3000</label>
+</transition>
+<transition>
+<source ref="id29"/>
+<target ref="id21"/>
+<label kind="guard">c == 1 &amp;&amp; agentAt[0] &gt;= 0 &amp;&amp; agentAt[1] &gt;= 0 &amp;&amp; agentAt[2] &gt;= 0</label>
+<label kind="assignment">c = 0</label>
+</transition>
+<transition>
+<source ref="id19"/>
+<target ref="id18"/>
+<label kind="guard">c==400</label>
+<label kind="assignment">objectAt[2]=l6, con=1</label>
+</transition>
+<transition>
+<source ref="id20"/>
+<target ref="id19"/>
+<label kind="guard">objectAt[0]==l6 &amp;&amp; gc &lt;= 3000</label>
+<label kind="assignment">c = 0</label>
+</transition>
+<transition>
+<source ref="id21"/>
+<target ref="id20"/>
+<label kind="guard">c==5</label>
+<label kind="assignment">objectAt[0]=l2, c=0</label>
+</transition>
+<transition>
+<source ref="id17"/>
+<target ref="id29"/>
+<label kind="assignment">c = 0</label>
+</transition>
+</template>
+<template>
+<name>Con1</name>
+<declaration>clock c;clock gc;</declaration>
+<location id="id22">
+<name>end</name>
+</location>
+<location id="id23">
+<name>fc</name>
+</location>
+<location id="id24">
+<name>rp</name>
+<label kind="invariant">c &lt;= 120</label>
+</location>
+<location id="id25">
+<name>start</name>
+</location>
+<init ref="id25"/>
+<transition>
+<source ref="id23"/>
+<target ref="id22"/>
+<label kind="guard">objectAt[1]==l11 &amp;&amp; gc &lt;= 3000</label>
+<label kind="assignment">con1_done = 1</label>
+</transition>
+<transition>
+<source ref="id24"/>
+<target ref="id23"/>
+<label kind="guard">c==120</label>
+<label kind="assignment">objectAt[1]=l8</label>
+</transition>
+<transition>
+<source ref="id25"/>
+<target ref="id24"/>
+<label kind="guard">con == 1</label>
+<label kind="assignment">c = 0</label>
+</transition>
+</template>
+<template>
+<name>Con2</name>
+<declaration>clock gc;</declaration>
+<location id="id26">
+<name>end</name>
+</location>
+<location id="id27">
+<name>rb</name>
+</location>
+<location id="id28">
+<name>start</name>
+</location>
+<init ref="id28"/>
+<transition>
+<source ref="id27"/>
+<target ref="id26"/>
+<label kind="guard">gc &lt;= 3000</label>
+<label kind="assignment">con2_done = 1</label>
+</transition>
+<transition>
+<source ref="id28"/>
+<target ref="id27"/>
+<label kind="guard">con==1 &amp;&amp; objectAt[2]==l2</label>
+</transition>
+</template>
+<system>O1 = Obj(0, 2, 6, 5);O2 = Obj(1, 8, 11, 6);O3 = Obj(2, 6, 2, 10);A1 = Agent(0, 11, 3, 1, 5000);A2 = Agent(1, 4, 8, 1, 5000);A3 = Agent(2, 2, 9, 1, 5000);P = Process(); C1 = Con1(); C2 = Con2();system O1, O2, O3, A1, A2, A3, P, C1, C2;</system>
+</nta>
